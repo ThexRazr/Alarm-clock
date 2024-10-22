@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake-Up Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #clock {
+            color: red;
+            font-family: 'Geo', sans-serif;
+            font-size: 15em;
+            margin-top: 20%;
+        }
+
+        #confirmation {
+            color: red;
+            font-family: 'Geo', sans-serif;
+            font-size: 2em;
+            margin-bottom: 10%;
+        }
+        button {
+            background-color: black; /* Red background */
+            color: red; /* White text */
+            border: 2px solid black; /* White border */
+            padding: 8px 16px; /* Button size */
+            font-size: 1em; /* Text size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor */
+        }
+
+        label {
+            background-color: black;
+            color: red;
+        }
+
+        input {
+            background-color: black;
+            color: red;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: darkred; /* Darken the red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <div>
+        <label for="alarmTime">Enter How long alarm should be (HH:MM): </label>
+        <input type="text" id="alarmTime" placeholder="7:30 for 7H 30M">
+        <button onclick="setAlarm()">Set Alarm</button>
+    </div>
+    <button id="play-noise">Play White Noise</button>
+    <audio id="white-noise" loop>
+        <source src="whitenoise.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="confirmation"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
